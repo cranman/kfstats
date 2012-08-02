@@ -24,24 +24,45 @@
 
 			medic = function(heal) {
 				var val;
+				var level;
+				var progress;
 
 				if (heal < 200) {
 					val = heal / 2;
+					level = 0;
+					progress = 200;
 				} else if (heal < 750) {
-					val = heal / 7.5;
+					val = (heal - 200) / 5.5;
+					level = 1;
+                                        progress = 750;
 				} else if (heal < 4000) {
-                                        val = heal / 40;
+                                        val = (heal - 750) / 32.5;
+					level = 2;
+                                        progress = 4000;
 				} else if (heal < 12000) {
-                                        val = heal / 120;
+                                        val = (heal - 4000) / 80;
+					level = 3;
+                                        progress = 12000;
 				} else if (heal < 25000) {
-                                        val = heal / 250;
+                                        val = (heal - 12000) / 130;
+					level = 4;
+                                        progress = 25000;
+				} else if (heal < 100000) {
+					val = (heal - 25000) / 750;
+					level = 5;
+                                        progress = 100000;
 				} else {
-                                        val = Math.min(heal / 1000, 100);
+                                        val = Math.min((heal - 100000)/ 1000, 100);
+					level = 6;
+                                        progress = 200000;
 				}
 
 				$('#medic-bar').progressbar({
 					value: val
 				});
+
+				$('#medic-level').html('<h4>Level: ' + level + '</h4>');
+				$('#medic-progress').html('<h4>Progress: ' + heal + ' / ' + progress +' Health Healed</h4>');
 			}
 
 			$(document).ready(function() {
@@ -71,25 +92,53 @@
 					<h2>Perks</h2>
 					<div id="medic">
 						<h3>Medic</h3>
-						<div id="medic-bar"></div>
+						<span id="medic-level"></span>
+						<span id="medic-progress"></span>
+						<div style="width:400px">
+							<div id="medic-bar"></div>
+						</div>
 					</div>
                                         <div id="support">
 						<h3>Support Specialist</h3>
+                                                <div style="width:400px">
+                                                        <div id="support-bar"></div>
+                                                </div>
+
 					</div>
                                         <div id="sharp">
 						<h3>Sharpshooter</h3>
+                                                <div style="width:400px">
+                                                        <div id="sharp-bar"></div>
+                                                </div>
+
 					</div>
                                         <div id="commando">
 						<h3>Commando</h3>
+                                                <div style="width:400px">
+                                                        <div id="commando-bar"></div>
+                                                </div>
+
 					</div>
                                         <div id="berzerker">
 						<h3>Berzerker</h3>
+                                                <div style="width:400px">
+                                                        <div id="berzerker-bar"></div>
+                                                </div>
+
 					</div>
                                         <div id="firebug">
 						<h3>Firebug</h3>
+                                                <div style="width:400px">
+                                                        <div id="firebug-bar"></div>
+                                                </div>
+
 					</div>
                                         <div id="demo">
 						<h3>Demolitions</h3>
+                                                <div style="width:400px">
+                                                        <div id="demo-bar"></div>
+                                                </div>
+
 					</div>
 				</div>
 				<div id="stats">
