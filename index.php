@@ -42,6 +42,8 @@
 					</div>
                                         <div id="support">
 						<h3>Support Specialist</h3>
+                                                <span id="support-level"></span>
+                                                <span id="support-progress"></span>
                                                 <div style="width:400px">
                                                         <div id="support-bar"></div>
                                                 </div>
@@ -49,6 +51,8 @@
 					</div>
                                         <div id="sharp">
 						<h3>Sharpshooter</h3>
+                                                <span id="sharp-level"></span>
+                                                <span id="sharp-progress"></span>
                                                 <div style="width:400px">
                                                         <div id="sharp-bar"></div>
                                                 </div>
@@ -56,6 +60,9 @@
 					</div>
                                         <div id="commando">
 						<h3>Commando</h3>
+                                                <span id="commando-level"></span>
+                                                <span id="commando-progress"></span>
+
                                                 <div style="width:400px">
                                                         <div id="commando-bar"></div>
                                                 </div>
@@ -63,6 +70,9 @@
 					</div>
                                         <div id="berzerker">
 						<h3>Berzerker</h3>
+                                                <span id="berzerker-level"></span>
+                                                <span id="berzerker-progress"></span>
+
                                                 <div style="width:400px">
                                                         <div id="berzerker-bar"></div>
                                                 </div>
@@ -70,6 +80,9 @@
 					</div>
                                         <div id="firebug">
 						<h3>Firebug</h3>
+                                                <span id="firebug-level"></span>
+                                                <span id="firebug-progress"></span>
+
                                                 <div style="width:400px">
                                                         <div id="firebug-bar"></div>
                                                 </div>
@@ -77,6 +90,9 @@
 					</div>
                                         <div id="demo">
 						<h3>Demolitions</h3>
+                                                <span id="demo-level"></span>
+                                                <span id="demo-progress"></span>
+
                                                 <div style="width:400px">
                                                         <div id="demo-bar"></div>
                                                 </div>
