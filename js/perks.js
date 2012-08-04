@@ -1,6 +1,6 @@
 calcPerkLevels = function(data) {
 	medic(data.damagehealed);
-//	support(data.weldingpoints, data.shotgundamage);
+	support(data.weldingpoints, data.shotgundamage);
 	sharp(data.headshotkills);
 //	commando(data.stalkerkills, data.bullpupdamage);
 	damageperk("berzerker", data.meleedamage);
@@ -135,4 +135,56 @@ damageperk = function(perk, damage) {
 
         $('#'+perk+'-level').html('<h4>Level: ' + level + '</h4>');
         $('#'+perk+'-progress').html('<h4>Progress: ' + damage + ' / ' + progress +' Damage Points Required</h4>');
+}
+
+support = function(weldpoints, damage) {
+	var val;
+	var level;
+	var weldprogress;
+	var damageprogress;
+
+	if (weldpoints < 2000 || damage < 25000) {
+		val = Math.min((weldpoints/40),50) + Math.min((damage/500),50);
+		level = 0;
+		weldprogress = 2000;
+		damageprogress = 25000;
+	} else if (weldpoints < 7000 || damage < 100000) {
+                val = Math.min(((weldpoints - 2000)/100),50) + Math.min(((damage - 25000)/1500),50);
+                level = 1;
+                weldprogress = 7000;
+                damageprogress = 100000;
+	} else if (weldpoints < 35000 || damage < 500000) {
+                val = Math.min(((weldpoints - 7000)/560),50) + Math.min(((damage - 100000)/8000),50);
+                level = 2;
+                weldprogress = 35000;
+                damageprogress = 500000;
+	} else if (weldpoints < 120000 || damage < 1500000) {
+                val = Math.min(((weldpoints - 35000)/1700),50) + Math.min(((damage - 500000)/20000),50);
+                level = 3;
+                weldprogress = 120000;
+                damageprogress = 1500000;
+	} else if (weldpoints < 250000 || damage < 3500000) {
+                val = Math.min(((weldpoints - 120000)/2600),50) + Math.min(((damage - 1500000)/40000),50);
+                level = 4;
+                weldprogress = 250000;
+                damageprogress = 3500000;
+	} else if (weldpoints < 370000 || damage < 5500000) {
+                val = Math.min(((weldpoints - 250000)/2400),50) + Math.min(((damage - 3500000)/40000),50);
+                level = 5;
+                weldprogress = 370000;
+                damageprogress = 5500000;
+	} else {
+                val = Math.min(((weldpoints - 370000)/7400),50) + Math.min(((damage - 5500000)/110000),50);
+                level = 6;
+                weldprogress = 740000;
+                damageprogress = 11000000;
+	}
+
+
+        $('#support-bar').progressbar({
+                value: val
+        });
+
+        $('#support-level').html('<h4>Level: ' + level + '</h4>');
+        $('#support-progress').html('<h4>Progress: ' + weldpoints + ' / ' + weldprogress +' Weld Points Required</h4><h4>Progress: ' + damage + ' / ' + damageprogress +' Damage Points Required</h4>');
 }
