@@ -57,31 +57,31 @@ sharp = function(headshots) {
 	var progress;
 
 	if (headshots < 30) {
-		val = (headshots / 30) * 100;
+		val = headshots / 0.3;
 		level = 0;
 		progress = 30;
 	} else if (headshots < 100) {
-                val = (headshots / 30) * 100;
+                val = (headshots - 30) / 0.7;
                 level = 1;
                 progress = 100;
 	} else if (headshots < 700) {
-                val = (headshots / 30) * 100;
+                val = (headshots - 100) / 6;
                 level = 2;
                 progress = 700;
 	} else if (headshots < 2500) {
-                val = (headshots / 30) * 100;
+                val = (headshots - 700) / 18;
                 level = 3;
                 progress = 2500;
 	} else if (headshots < 5500) {
-                val = (headshots / 30) * 100;
+                val = (headshots - 2500) / 30;
                 level = 4;
                 progress = 5500;
 	} else if (headshots < 8500) {
-                val = (headshots / 30) * 100;
+                val = (headshots - 5500) / 30;
                 level = 5;
                 progress = 8500;
 	} else {
-                val = (headshots / 30) * 100;
+                val = Math.min(((headshots - 8500) / 85), 100);
                 level = 6;
                 progress = 17000;
 	}
