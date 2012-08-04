@@ -1,5 +1,11 @@
 calcPerkLevels = function(data) {
 	medic(data.damagehealed);
+//	support(data.weldingpoints, data.shotgundamage);
+	sharp(data.headshotkills);
+//	commando(data.stalkerkills, data.bullpupdamage);
+//	berzerker(data.meleedamage);
+//	firebug(data.flamethrowerdamage);
+//	demo(data.explosivesdamage);
 }
 
 medic = function(heal) {
@@ -43,4 +49,47 @@ medic = function(heal) {
 
 	$('#medic-level').html('<h4>Level: ' + level + '</h4>');
 	$('#medic-progress').html('<h4>Progress: ' + heal + ' / ' + progress +' Health Healed</h4>');
+}
+
+sharp = function(headshots) {
+	var val;
+	var level;
+	var progress;
+
+	if (headshots < 30) {
+		val = (headshots / 30) * 100;
+		level = 0;
+		progress = 30;
+	} else if (headshots < 100) {
+                val = (headshots / 30) * 100;
+                level = 1;
+                progress = 100;
+	} else if (headshots < 700) {
+                val = (headshots / 30) * 100;
+                level = 2;
+                progress = 700;
+	} else if (headshots < 2500) {
+                val = (headshots / 30) * 100;
+                level = 3;
+                progress = 2500;
+	} else if (headshots < 5500) {
+                val = (headshots / 30) * 100;
+                level = 4;
+                progress = 5500;
+	} else if (headshots < 8500) {
+                val = (headshots / 30) * 100;
+                level = 5;
+                progress = 8500;
+	} else {
+                val = (headshots / 30) * 100;
+                level = 6;
+                progress = 17000;
+	}
+
+        $('#sharp-bar').progressbar({
+                value: val
+        });
+
+        $('#sharp-level').html('<h4>Level: ' + level + '</h4>');
+        $('#sharp-progress').html('<h4>Progress: ' + headshots + ' / ' + progress +' Headshots</h4>');
 }
