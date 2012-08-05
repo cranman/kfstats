@@ -28,6 +28,8 @@
 				</div>
 				<div id="person">
 				</div>
+				<div id="errors">
+				</div>
 			</div>
 			<div id="page">
 				<div id="perks">

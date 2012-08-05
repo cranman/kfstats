@@ -26,8 +26,13 @@
 
 		$xml = simplexml_load_file($url) or die ('Error loading XML data');
 
-		foreach($xml->stats->item as $item) {
-			$stats[(string) $item->APIName] = (string) $item->value;
+		if ($xml->xpath('error')) {
+			die('Does not own game');
+		} else {
+			foreach($xml->stats->item as $item) {
+				$stats[(string) $item->APIName] = (string) $item->value;
+			}
+
 		}
 
 		return $stats;
@@ -40,3 +45,4 @@
 
 		echo($json);
 	}
+
