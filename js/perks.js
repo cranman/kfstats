@@ -2,7 +2,7 @@ calcPerkLevels = function(data) {
 	medic(data.damagehealed);
 	support(data.weldingpoints, data.shotgundamage);
 	sharp(data.headshotkills);
-//	commando(data.stalkerkills, data.bullpupdamage);
+	commando(data.stalkerkills, data.bullpupdamage);
 	damageperk("berzerker", data.meleedamage);
 	damageperk("firebug", data.flamethrowerdamage);
 	damageperk("demo", data.explosivesdamage);
@@ -180,11 +180,61 @@ support = function(weldpoints, damage) {
                 damageprogress = 11000000;
 	}
 
-
         $('#support-bar').progressbar({
                 value: val
         });
 
         $('#support-level').html('<h4>Level: ' + level + '</h4>');
         $('#support-progress').html('<h4>Progress: ' + weldpoints + ' / ' + weldprogress +' Weld Points Required</h4><h4>Progress: ' + damage + ' / ' + damageprogress +' Damage Points Required</h4>');
+}
+
+commando = function(stalkers, damage) {
+        var val;
+        var level;
+        var stalkerprogress;
+        var damageprogress;
+
+        if (stalkers < 30 || damage < 25000) {
+                val = Math.min((stalkers/0.6),50) + Math.min((damage/500),50);
+                level = 0;
+                stalkerprogress = 30;
+                damageprogress = 25000;
+        } else if (stalkers < 100 || damage < 100000) {
+                val = Math.min(((stalkers - 30)/1.4),50) + Math.min(((damage - 25000)/1500),50);
+                level = 1;
+                stalkerprogress = 100;
+                damageprogress = 100000;
+        } else if (stalkers < 350 || damage < 500000) {
+                val = Math.min(((stalkers - 100)/5),50) + Math.min(((damage - 100000)/8000),50);
+                level = 2;
+                stalkerprogress = 350;
+                damageprogress = 500000;
+        } else if (stalkers < 1200 || damage < 1500000) {
+                val = Math.min(((stalkers - 350)/17),50) + Math.min(((damage - 500000)/20000),50);
+                level = 3;
+                stalkerprogress = 1200;
+                damageprogress = 1500000;
+        } else if (stalkers < 2400 || damage < 3500000) {
+                val = Math.min(((stalkers - 1200)/24),50) + Math.min(((damage - 1500000)/40000),50);
+                level = 4;
+                stalkerprogress = 2400;
+                damageprogress = 3500000;
+        } else if (stalkers < 3600 || damage < 5500000) {
+                val = Math.min(((stalkers - 2400)/24),50) + Math.min(((damage - 3500000)/40000),50);
+                level = 5;
+                stalkerprogress = 3600;
+                damageprogress = 5500000;
+        } else {
+                val = Math.min(((stalkers - 3600)/72),50) + Math.min(((damage - 5500000)/110000),50);
+                level = 6;
+                stalkerprogress = 7200;
+                damageprogress = 11000000;
+        }
+
+        $('#commando-bar').progressbar({
+                value: val
+        });
+
+        $('#commando-level').html('<h4>Level: ' + level + '</h4>');
+        $('#commando-progress').html('<h4>Progress: ' + stalkers + ' / ' + stalkerprogress +' Stalker Kills Required</h4><h4>Progress: ' + damage + ' / ' + damageprogress +' Damage Points Required</h4>');
 }
