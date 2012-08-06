@@ -25,7 +25,6 @@ getAchievements = function(name) {
                 $.each(data, function(key, val) {
                         $('#achievements').append('<div>'+key+': '+val+'</div>');
                 });
-                calcPerkLevels(data);
         }).error(function(jqXHR, textStatus, errorThrown) {
                 console.log("hi");
                 $('#errors').text(jqXHR.responseText);
