@@ -23,7 +23,10 @@ getAchievements = function(name) {
         var query = 'query.php?name=' + name + '&type=achievements';
         var jqxhr = $.getJSON(query, function(data) {
                 $.each(data, function(key, val) {
-                        $('#achievements').append('<div>'+key+': '+val+'</div>');
+                        $('#achievements').append('<div id='+key+'></div>');
+
+			$('#'+key).append('<img src="'+val[1]+'">');
+			$('#'+key).append(val[0]+': '+val[2]+'Unlocked at: '+ (new Date(val[3] * 1000)).toDateString());
                 });
         }).error(function(jqXHR, textStatus, errorThrown) {
                 console.log("hi");
