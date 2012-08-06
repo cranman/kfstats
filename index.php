@@ -12,6 +12,7 @@
 				$('#searchform').submit(function() {
 					// This should go and query the php
 					getStatsFeed($('#searchname').val());
+					getAchievements($('#searchname').val());
 					return false;
 				});
 			});
@@ -103,6 +104,9 @@
 				</div>
 				<div id="stats">
 					<h2>Stats</h2>
+				</div>
+				<div id="achievements">
+					<h2>Achievements</h2>
 				</div>
 			</div>
 			<div id="footer"></div>

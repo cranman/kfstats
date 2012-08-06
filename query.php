@@ -6,9 +6,16 @@
 
 		$id = processName($name);
 
-		$stats = getKFStatsfeed($id);
-
-		generateJSON($stats);
+		switch ($type) {
+			case 'statsfeed' :
+				$stats = getKFStatsfeed($id);
+				generateJSON($stats);
+				break;
+			case 'achievements' :
+				$achievements = getKFAchievements($id);
+				generateJSON($achievements);
+				break;
+		}
 	}
 
 	function processName($name) {
@@ -37,6 +44,26 @@
 		}
 
 		return $stats;
+	}
+
+	function getKFAchievements($id) {
+		$HEAD_URL = 'http://steamcommunity.com/';
+		$TAIL_URL = '/stats/KillingFloor?tab=achievements&xml=1';
+
+		$url = $HEAD_URL.$id.$TAIL_URL;
+
+                $xml = simplexml_load_file($url) or die ('Error loading XML data');
+
+                if ($xml->xpath('error')) {
+                        die('Does not own game');
+                } else {
+                        foreach($xml->achievements->achievement as $item) {
+                                $stats[(string) $item->apiname] = array((string) $item->name, (string) $item->iconClosed, (string) $item->description, (string) $item->unlockTimestamp);
+                        }
+
+                }
+
+                return $stats;
 	}
 
 	function generateJSON($stats) {
