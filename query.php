@@ -1,7 +1,8 @@
 <?php
 
-	if(isset($_GET['name'])) {
+	if(isset($_GET['name']) && isset($_GET['type'])) {
 		$name = $_GET['name'];
+		$type = $_GET['type'];
 
 		$id = processName($name);
 
