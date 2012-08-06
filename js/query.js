@@ -1,4 +1,4 @@
- getStatsFeed = function(name) {
+getStatsFeed = function(name) {
 	$('#stats').html('<h2>Stats</h2>');
 	$('#errors').text('');
 	var query = 'query.php?name=' + name + '&type=statsfeed';
@@ -18,7 +18,7 @@
 }
 
 getAchievements = function(name) {
-        $('#achievments').html('<h2>Stats</h2>');
+        $('#achievements').html('<h2>Achievements</h2>');
         $('#errors').text('');
         var query = 'query.php?name=' + name + '&type=achievements';
         var jqxhr = $.getJSON(query, function(data) {
