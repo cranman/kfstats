@@ -11,7 +11,7 @@
 			$(document).ready(function() {
 				$('#searchform').submit(function() {
 					// This should go and query the php
-					getStats($('#searchname').val());
+					getStatsFeed($('#searchname').val());
 					return false;
 				});
 			});

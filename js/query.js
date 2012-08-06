@@ -1,4 +1,4 @@
- getStats = function(name) {
+ getStatsFeed = function(name) {
 	$('#stats').html('<h2>Stats</h2>');
 	$('#errors').text('');
 	var query = 'query.php?name=' + name + '&type=statsfeed';
@@ -16,3 +16,4 @@
 
 	return false;
 }
+
