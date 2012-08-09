@@ -1,0 +1,23 @@
+/* Layout */
+
+body {
+	margin: 0 auto;
+	min-width: 980px;
+	max-width: 1200px;
+	text-align: left;
+}
+
+html {
+	text-align: center;
+}
+
+/* Colours */
+
+body {
+	color: #ccc;
+	background-color: #191919;
+}
+
+html {
+	background-color: #444;
+}
