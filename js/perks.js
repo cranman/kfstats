@@ -43,11 +43,8 @@ medic = function(heal) {
 		progress = 200000;
 	}
 
-	$('#medic-bar').progressbar({
-		value: val
-	});
+        perkInfo('medic', val, level);
 
-	$('#medic-level').html('<h4>Level: ' + level + '</h4>');
 	$('#medic-progress').html('<h4>Progress: ' + heal + ' / ' + progress +' Health Healed</h4>');
 }
 
@@ -86,11 +83,8 @@ sharp = function(headshots) {
                 progress = 17000;
 	}
 
-        $('#sharp-bar').progressbar({
-                value: val
-        });
+        perkInfo('sharp', val, level);
 
-        $('#sharp-level').html('<h4>Level: ' + level + '</h4>');
         $('#sharp-progress').html('<h4>Progress: ' + headshots + ' / ' + progress +' Headshots</h4>');
 }
 
@@ -129,11 +123,8 @@ damageperk = function(perk, damage) {
                 progress = 11000000;
 	}
 
-        $('#'+perk+'-bar').progressbar({
-                value: val
-        });
+        perkInfo(perk, val, level);
 
-        $('#'+perk+'-level').html('<h4>Level: ' + level + '</h4>');
         $('#'+perk+'-progress').html('<h4>Progress: ' + damage + ' / ' + progress +' Damage Points Required</h4>');
 }
 
@@ -180,11 +171,8 @@ support = function(weldpoints, damage) {
                 damageprogress = 11000000;
 	}
 
-        $('#support-bar').progressbar({
-                value: val
-        });
+        perkInfo('support', val, level);
 
-        $('#support-level').html('<h4>Level: ' + level + '</h4>');
         $('#support-progress').html('<h4>Progress: ' + weldpoints + ' / ' + weldprogress +' Weld Points Required</h4><h4>Progress: ' + damage + ' / ' + damageprogress +' Damage Points Required</h4>');
 }
 
@@ -231,10 +219,16 @@ commando = function(stalkers, damage) {
                 damageprogress = 11000000;
         }
 
-        $('#commando-bar').progressbar({
+	perkInfo('commando', val, level);
+
+        $('#commando-progress').html('<h4>Progress: ' + stalkers + ' / ' + stalkerprogress +' Stalker Kills Required</h4><h4>Progress: ' + damage + ' / ' + damageprogress +' Damage Points Required</h4>');
+}
+
+perkInfo = function(perk, val, level) {
+        $('#'+perk+'-bar').progressbar({
                 value: val
         });
 
-        $('#commando-level').html('<h4>Level: ' + level + '</h4>');
-        $('#commando-progress').html('<h4>Progress: ' + stalkers + ' / ' + stalkerprogress +' Stalker Kills Required</h4><h4>Progress: ' + damage + ' / ' + damageprogress +' Damage Points Required</h4>');
+        $('#'+perk+'-level').html('<h4>Level: ' + level + '</h4>');
+
 }
