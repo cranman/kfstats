@@ -3,6 +3,8 @@ getStatsFeed = function(name) {
 	$('#errors').text('');
 	var query = 'query.php?name=' + name + '&type=statsfeed';
 	var jqxhr = $.getJSON(query, function(data) {
+		$('.perk').show();
+
 		$.each(data, function(key, val) {
 			$('#stats').append('<div>'+key+': '+val+'</div>');
 		});

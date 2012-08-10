@@ -10,6 +10,8 @@
 		<script type="text/javascript" src="js/perks.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
+				$('.perk').hide();
+
 				$('#searchform').submit(function() {
 					// This should go and query the php
 					getStatsFeed($('#searchname').val());
