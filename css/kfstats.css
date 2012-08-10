@@ -4,13 +4,13 @@ body {
 	margin: 0 auto;
 	max-width: 1200px;
 	text-align: left;
-	height: 100%;
+	height: auto;
 }
 
 html {
 	margin-bottom: 0;
 	text-align: center;
-	height: 100%;
+	height: auto;
 }
 
 #page {
