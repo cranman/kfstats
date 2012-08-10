@@ -110,8 +110,10 @@
 					<h2>Achievements</h2>
 				</div>
 			</div>
-			<div id="footer"></div>
+				<div id="clearfooter"></div>
 		</div>
-
+			<div id="footer">
+				<span>kfstats by cranman</span>
+			</div>
 	</body>
 </html>
