@@ -26,7 +26,7 @@ getAchievements = function(name) {
 
 			$('#'+key).append('<img src="'+val[1]+'">');
 			$('#'+key).append('<div class="achievementname">'+val[0]);
-			$('#'+key).append('<div class="achievementtext">'+val[2]+'Unlocked at: '+ (new Date(val[3] * 1000)).toDateString()+'</div>');
+			$('#'+key).append('<div class="achievementtext">'+val[2]+'<br>Unlocked at: '+ (new Date(val[3] * 1000)).toDateString()+'</div>');
                 });
         }).error(function(jqXHR, textStatus, errorThrown) {
                 $('#errors').text(jqXHR.responseText);
