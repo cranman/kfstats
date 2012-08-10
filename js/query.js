@@ -10,10 +10,7 @@ getStatsFeed = function(name) {
 		});
 		calcPerkLevels(data);
 	}).error(function(jqXHR, textStatus, errorThrown) {
-		console.log("hi");
 		$('#errors').text(jqXHR.responseText);
-//		console.log("error " + textStatus);
-//		console.log("incoming Text " + jqXHR.responseText);
 	});
 
 	return false;
@@ -32,10 +29,7 @@ getAchievements = function(name) {
 			$('#'+key).append('<div class="achievementtext">'+val[2]+'Unlocked at: '+ (new Date(val[3] * 1000)).toDateString()+'</div>');
                 });
         }).error(function(jqXHR, textStatus, errorThrown) {
-                console.log("hi");
                 $('#errors').text(jqXHR.responseText);
-//              console.log("error " + textStatus);
-//              console.log("incoming Text " + jqXHR.responseText);
         });
 
         return false;
