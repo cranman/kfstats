@@ -31,7 +31,6 @@ html {
 #footer {
 	height: 30px;
 	position: relative;
-	background-color: #111111;
 	text-align: right;
 	padding-right: 30px;
 }
@@ -48,6 +47,10 @@ html {
 }
 
 #header {
+	background-color: #111111;
+}
+
+#footer {
 	background-color: #111111;
 }
 
