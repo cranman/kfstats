@@ -22,7 +22,7 @@ getAchievements = function(name) {
         var query = 'query.php?name=' + name + '&type=achievements';
         var jqxhr = $.getJSON(query, function(data) {
                 $.each(data, function(key, val) {
-                        $('#achievements').append('<div id='+key+'></div>');
+                        $('#achievements').append('<div id='+key+' class="achievement"></div>');
 
 			$('#'+key).append('<img src="'+val[1]+'">');
 			$('#'+key).append('<div class="achievementname">'+val[0]);
