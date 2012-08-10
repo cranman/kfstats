@@ -43,7 +43,7 @@
 						<span id="medic-level"></span>
 						<span id="medic-progress"></span>
 						<div style="width:400px">
-							<div id="medic-bar"></div>
+							<div id="medic-bar" class="perkprogress"></div>
 						</div>
 					</div>
                                         <div id="support" class="perk">
@@ -51,7 +51,7 @@
                                                 <span id="support-level"></span>
                                                 <span id="support-progress"></span>
                                                 <div style="width:400px">
-                                                        <div id="support-bar"></div>
+                                                        <div id="support-bar" class="perkprogress"></div>
                                                 </div>
 
 					</div>
@@ -60,7 +60,7 @@
                                                 <span id="sharp-level"></span>
                                                 <span id="sharp-progress"></span>
                                                 <div style="width:400px">
-                                                        <div id="sharp-bar"></div>
+                                                        <div id="sharp-bar" class="perkprogress"></div>
                                                 </div>
 
 					</div>
@@ -70,7 +70,7 @@
                                                 <span id="commando-progress"></span>
 
                                                 <div style="width:400px">
-                                                        <div id="commando-bar"></div>
+                                                        <div id="commando-bar" class="perkprogress"></div>
                                                 </div>
 
 					</div>
@@ -80,7 +80,7 @@
                                                 <span id="berzerker-progress"></span>
 
                                                 <div style="width:400px">
-                                                        <div id="berzerker-bar"></div>
+                                                        <div id="berzerker-bar" class="perkprogress"></div>
                                                 </div>
 
 					</div>
@@ -90,7 +90,7 @@
                                                 <span id="firebug-progress"></span>
 
                                                 <div style="width:400px">
-                                                        <div id="firebug-bar"></div>
+                                                        <div id="firebug-bar" class="perkprogress"></div>
                                                 </div>
 
 					</div>
@@ -100,7 +100,7 @@
                                                 <span id="demo-progress"></span>
 
                                                 <div style="width:400px">
-                                                        <div id="demo-bar"></div>
+                                                        <div id="demo-bar" class="perkprogress"></div>
                                                 </div>
 
 					</div>

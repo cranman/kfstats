@@ -74,6 +74,10 @@ html {
 	background-color: #111111;
 }
 
+.perkprogress div {
+	background: #A18065;
+}
+
 /* Fonts */
 
 body {
