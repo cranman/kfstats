@@ -1,18 +1,25 @@
 /* Layout */
 
 body {
-	margin: 0 auto;
+/*	margin: 0 auto; */
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
 	min-width: 980px;
 	max-width: 1200px;
 	text-align: left;
+	height: auto;
 }
 
 html {
+	margin-bottom: 0;
 	text-align: center;
+	height: auto;
 }
 
-div div div {
-	margin: 0 10px;
+#page {
+	margin: 0 20px;
 }
 
 /* Colours */

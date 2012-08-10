@@ -34,9 +34,9 @@
 				</div>
 			</div>
 			<div id="page">
-				<div id="perks">
+				<div id="perks" class="content">
 					<h2>Perks</h2>
-					<div id="medic">
+					<div id="medic" class="perk">
 						<h3>Medic</h3>
 						<span id="medic-level"></span>
 						<span id="medic-progress"></span>
@@ -44,7 +44,7 @@
 							<div id="medic-bar"></div>
 						</div>
 					</div>
-                                        <div id="support">
+                                        <div id="support" class="perk">
 						<h3>Support Specialist</h3>
                                                 <span id="support-level"></span>
                                                 <span id="support-progress"></span>
@@ -53,7 +53,7 @@
                                                 </div>
 
 					</div>
-                                        <div id="sharp">
+                                        <div id="sharp" class="perk">
 						<h3>Sharpshooter</h3>
                                                 <span id="sharp-level"></span>
                                                 <span id="sharp-progress"></span>
@@ -62,7 +62,7 @@
                                                 </div>
 
 					</div>
-                                        <div id="commando">
+                                        <div id="commando" class="perk">
 						<h3>Commando</h3>
                                                 <span id="commando-level"></span>
                                                 <span id="commando-progress"></span>
@@ -72,7 +72,7 @@
                                                 </div>
 
 					</div>
-                                        <div id="berzerker">
+                                        <div id="berzerker" class="perk">
 						<h3>Berzerker</h3>
                                                 <span id="berzerker-level"></span>
                                                 <span id="berzerker-progress"></span>
@@ -82,7 +82,7 @@
                                                 </div>
 
 					</div>
-                                        <div id="firebug">
+                                        <div id="firebug" class="perk">
 						<h3>Firebug</h3>
                                                 <span id="firebug-level"></span>
                                                 <span id="firebug-progress"></span>
@@ -92,7 +92,7 @@
                                                 </div>
 
 					</div>
-                                        <div id="demo">
+                                        <div id="demo" class="perk">
 						<h3>Demolitions</h3>
                                                 <span id="demo-level"></span>
                                                 <span id="demo-progress"></span>
