@@ -13,6 +13,20 @@ html {
 	height: 100%;
 }
 
+header {
+	width: 100%;
+	padding-top: 30px;
+	height: 60px;
+}
+
+footer {
+	text-align: right;
+	padding-right: 30px;
+	height: 30px;
+	margin-top: -30px;
+	clear: both;
+}
+
 #page {
 	margin: 0 20px;
 	padding-bottom: 30px;
@@ -22,12 +36,9 @@ html {
 	min-height: 100%;
 }
 
-footer {
+#searchform {
 	text-align: right;
 	padding-right: 30px;
-	height: 30px;
-	margin-top: -30px;
-	clear: both;
 }
 
 .achievement {
@@ -65,13 +76,13 @@ header {
 	background-color: #111111;
 }
 
+footer {
+	background-color: #111111;
+}
+
 #container {
 	color: #ccc;
         background-color: #191919;
-}
-
-footer {
-	background-color: #111111;
 }
 
 .perkprogress div {
@@ -83,19 +94,4 @@ footer {
 body {
 	font-size: 0.9em;
 	font-family: Tahoma, Geneva, sans-serif;
-}
-
-/* Header */
-
-header {
-	width: 100%;
-	padding-top: 30px;
-	height: 60px;
-}
-
-/* Searchform */
-
-#searchform {
-	text-align: right;
-	padding-right: 30px;
 }
