@@ -1,5 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
+		<title>kfstats</title>
+
+		<meta charset="UTF-8" />
+
 		<link type="text/css" href="css/smoothness/jquery-ui-1.8.22.custom.css" rel="stylesheet" />
 		<link type="text/css" href="css/kfstats.css" rel="stylesheet" />
 
