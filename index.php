@@ -72,8 +72,6 @@
 				</div>
 			</div>
 		</div>
-		<div id="footer">
-			<span>kfstats by cranman</span>
-		</div>
+		<footer>kfstats by cranman</footer>
 	</body>
 </html>

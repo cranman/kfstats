@@ -22,7 +22,7 @@ html {
 	min-height: 100%;
 }
 
-#footer {
+footer {
 	text-align: right;
 	padding-right: 30px;
 	height: 30px;
@@ -70,7 +70,7 @@ html {
         background-color: #191919;
 }
 
-#footer {
+footer {
 	background-color: #111111;
 }
 
