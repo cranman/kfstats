@@ -28,7 +28,7 @@
 	</head>
 	<body>
 		<div id="container">
-			<div id="header">
+			<header>
 				<div id="search">
 					<form id="searchform">
 						<input id="searchname" type="text" />
@@ -39,7 +39,7 @@
 				</div>
 				<div id="errors">
 				</div>
-			</div>
+			</header>
 			<div id="page">
 				<div id="perks" class="content">
 					<h2>Perks</h2>

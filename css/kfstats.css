@@ -61,7 +61,7 @@ html {
 	background-color: #444;
 }
 
-#header {
+header {
 	background-color: #111111;
 }
 
@@ -87,7 +87,7 @@ body {
 
 /* Header */
 
-#header {
+header {
 	width: 100%;
 	padding-top: 30px;
 	height: 60px;
