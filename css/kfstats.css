@@ -4,35 +4,30 @@ body {
 	margin: 0 auto;
 	max-width: 1000px;
 	text-align: left;
-	height: auto;
+	height: 100%;
 }
 
 html {
-	margin-bottom: 0;
+	margin: 0;
 	text-align: center;
-	height: auto;
+	height: 100%;
 }
 
 #page {
 	margin: 0 20px;
+	padding-bottom: 30px;
 }
 
 #container {
 	min-height: 100%;
-	margin-bottom: -30px;
-	position: relative;
-}
-
-#clearfooter {
-	height: 30px;
-	clear: both;
 }
 
 #footer {
-	height: 30px;
-	position: relative;
 	text-align: right;
 	padding-right: 30px;
+	height: 30px;
+	margin-top: -30px;
+	clear: both;
 }
 
 .achievement {
@@ -68,6 +63,11 @@ html {
 
 #header {
 	background-color: #111111;
+}
+
+#container {
+	color: #ccc;
+        background-color: #191919;
 }
 
 #footer {
