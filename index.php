@@ -17,6 +17,8 @@
 			$(document).ready(function() {
 				$('.perk').hide();
 
+				$('#page').tabs();
+
 				$('#searchform').submit(function() {
 					// This should go and query the php
 					getStatsFeed($('#searchname').val());
@@ -41,6 +43,14 @@
 				</div>
 			</header>
 			<div id="page">
+				<div id="tabs">
+					<ul>
+						<li><a href="#perks">Perks</a></li>
+                                                <li><a href="#stats">Stats</a></li>
+                                                <li><a href="#achievements">Achievements</a></li>
+					</ul>
+				</div>
+
 				<div id="perks" class="content">
 					<h2>Perks</h2>
 
