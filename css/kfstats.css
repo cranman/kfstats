@@ -9,6 +9,7 @@ body {
 
 html {
 	margin: 0;
+	padding: 0;
 	text-align: center;
 	height: 100%;
 }
@@ -23,7 +24,7 @@ footer {
 	text-align: right;
 	padding-right: 30px;
 	height: 30px;
-	margin-top: -30px;
+	margin-top: -30px; 
 	clear: both;
 }
 

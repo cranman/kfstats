@@ -17,7 +17,7 @@
 			$(document).ready(function() {
 				$('.perk').hide();
 
-				$('#page').tabs();
+				$('#tabs').tabs();
 
 				$('#searchform').submit(function() {
 					// This should go and query the php
@@ -47,39 +47,44 @@
 					<ul>
 						<li><a href="#perks">Perks</a></li>
                                                 <li><a href="#stats">Stats</a></li>
+						<li><a href="#maps">Maps</a></li>
                                                 <li><a href="#achievements">Achievements</a></li>
 					</ul>
-				</div>
 
-				<div id="perks" class="content">
-					<h2>Perks</h2>
+					<div id="perks" class="content">
+						<h2>Perks</h2>
 
-					<?php
-						$perks = array('medic' => 'Medic', 'support' => 'Support Specialist', 'sharp' => 'Sharpshooter', 'commando' => 'Commando', 'berzerker' => 'Berzerker', 'firebug' => 'Firebug', 'demo' => 'Demolitions');
+						<?php
+							$perks = array('medic' => 'Medic', 'support' => 'Support Specialist', 'sharp' => 'Sharpshooter', 'commando' => 'Commando', 'berzerker' => 'Berzerker', 'firebug' => 'Firebug', 'demo' => 'Demolitions');
 
-						foreach ($perks as $p => $n) {
-					?>
+							foreach ($perks as $p => $n) {
+						?>
 
-					<div id="<?php echo $p; ?>" class="perk">
-						<h3><?php echo $n; ?></h3>
-						<span id="<?php echo $p; ?>-level"></span>
-						<span id="<?php echo $p; ?>-progress"></span>
-						<div style="width:400px">
-							<div id="<?php echo $p; ?>-bar" class="perkprogress"></div>
+						<div id="<?php echo $p; ?>" class="perk">
+							<h3><?php echo $n; ?></h3>
+							<span id="<?php echo $p; ?>-level"></span>
+							<span id="<?php echo $p; ?>-progress"></span>
+							<div style="width:400px">
+								<div id="<?php echo $p; ?>-bar" class="perkprogress"></div>
+							</div>
 						</div>
+
+						<?php
+							}
+						?>
+
 					</div>
+					<div id="stats">
+						<h2>Stats</h2>
+					</div>
+					<div id="maps">
+						<h2>Maps</h2>
+					</div>
+					<div id="achievements">
+						<h2>Achievements</h2>
+					</div>
+				</div>
 
-					<?php
-						}
-					?>
-
-				</div>
-				<div id="stats">
-					<h2>Stats</h2>
-				</div>
-				<div id="achievements">
-					<h2>Achievements</h2>
-				</div>
 			</div>
 		</div>
 		<footer>kfstats by cranman</footer>
